@@ -4,14 +4,16 @@ import Contact from './Contact';
 import Header from './Header';
 import Home from './Home';
 import Portfolio from './Portfolio';
+import Display from './Display';
 
 export default function AppRouter() {
   return (
     <BrowserRouter>
-    <Header />
+      <Header />
       <Switch>
         <Route exact path="/" component={Home} />
-        <Route path="/portfolio" component={Portfolio} />
+        <Route exact path="/portfolio" component={Portfolio} />
+        <Route path="/portfolio/:id" component={Display} />
         <Route path="/contact" component={Contact} />
       </Switch>
     </BrowserRouter>

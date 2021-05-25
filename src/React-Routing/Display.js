@@ -1,10 +1,9 @@
 import React from 'react';
 
 export default function Display() {
-  console.log(this.props);
   return (
     <div>
-      <p>Displaying</p>
+      <h4>Display</h4>
     </div>
   );
 }

@@ -1,9 +1,9 @@
 import React from 'react';
 
-export default function Display() {
+export default function Display(props) {
   return (
     <div>
-      <h4>Display</h4>
+      <h4>Displaying {props.match.params.id}</h4>
     </div>
   );
 }

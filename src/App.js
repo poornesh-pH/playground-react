@@ -37,6 +37,8 @@ export default function App() {
       <Display message={counter} /> <hr />
       <AppRouter />
       <hr />
+      <br />
+      <br />
       <Dashboard />
     </> // React.Fragment
   );

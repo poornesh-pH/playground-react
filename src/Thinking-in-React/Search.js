@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function Search() {
+export default function Search(props) {
   return (
     <div>
       <div class="input-field col s6">
@@ -10,7 +10,7 @@ export default function Search() {
       <div>
         <p>
           <label>
-            <input type="checkbox" onChange={}/>
+            <input type="checkbox" onChange={props.availablity} />
             <span>Show only available items</span>
           </label>
         </p>

@@ -43,18 +43,26 @@ export default class Dashboard extends Component {
           stocked: true,
           name: 'Nexus 7'
         }
-      ]
+      ],
+      available: false
     };
   }
   render() {
     const availablity = () => {
-      console.log('changed');
+      this.setState(() => {
+        return {
+          available: !available
+        };
+      });
     };
     return (
       <div className="container">
         <h5>Thinking in React</h5>
         <Search availablity={availablity} />
-        <Products products={this.state.products} />
+        <Products
+          products={this.state.products}
+          available={this.state.available}
+        />
       </div>
     );
   }

@@ -5,32 +5,35 @@ export default function ProductList(props) {
   return (
     <div>
       <h6>Shopping Goods</h6>
-      {/* <ul class="collection">
-        {props.products.map(product => {
-          <li class="collection-item">
-            {product.name}
-            <div className="secondary-content">{product.price}</div>
-          </li>;
-        })}
-      </ul> */}
       <ul class="collection">
         {props.products.map(product => {
-          return (
-            <div>
-              <li class="collection-item">
-                {product.name}
-                <div className="secondary-content">{product.price}</div>
-              </li>
-            </div>
-          );
+          if (product.category == 'Sporting Goods') {
+            return (
+              <div>
+                <li class="collection-item">
+                  {product.name}
+                  <div className="secondary-content">{product.price}</div>
+                </li>
+              </div>
+            );
+          }
         })}
       </ul>
-      {/* <h6>Electronics</h6>
+      <h6>Electronics</h6>
       <ul class="collection">
-        <li class="collection-item">
-          Alwin<div className="secondary-content">50</div>
-        </li>
-      </ul> */}
+        {props.products.map(product => {
+          if (product.category == 'Electronics') {
+            return (
+              <div>
+                <li class="collection-item">
+                  {product.name}
+                  <div className="secondary-content">{product.price}</div>
+                </li>
+              </div>
+            );
+          }
+        })}
+      </ul>
     </div>
   );
 }

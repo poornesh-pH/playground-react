@@ -1,23 +1,21 @@
 import React from 'react';
 
 export default function ProductList(props) {
-  console.log(props.products);
+  console.log(props.products, props.availablity);
   return (
     <div>
       <h6>Shopping Goods</h6>
       <ul class="collection">
         {props.products.map(product => {
-          if ((props.available && product.stocked)) {
-            if (product.category == 'Sporting Goods') {
-              return (
-                <div>
-                  <li class="collection-item">
-                    {product.name}
-                    <div className="secondary-content">{product.price}</div>
-                  </li>
-                </div>
-              );
-            }
+          if (product.category == 'Sporting Goods') {
+            return (
+              <div>
+                <li class="collection-item">
+                  {product.name}
+                  <div className="secondary-content">{product.price}</div>
+                </li>
+              </div>
+            );
           }
         })}
       </ul>

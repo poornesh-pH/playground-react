@@ -44,18 +44,29 @@ export default class Dashboard extends Component {
           name: 'Nexus 7'
         }
       ],
-      available: false
+      onlyAvailable: false
     };
   }
   render() {
-    const availablity = () => {};
+    const availablity = prevState => {
+      this.setState(() => {
+        return {
+          onlyAvailable: !prevState.onlyAvailable
+        };
+      });
+      // if (this.state.onlyAvailable) {
+      //   return this.state.products.filter(product => product.stocked == true);
+      // } else {
+      //   return this.state.products;
+      // }
+    };
     return (
       <div className="container">
         <h5>Thinking in React</h5>
         <Search availablity={availablity} />
         <Products
           products={this.state.products}
-          available={this.state.available}
+          availablity={this.state.onlyAvailable}
         />
       </div>
     );

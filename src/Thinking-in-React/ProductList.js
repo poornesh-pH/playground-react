@@ -13,12 +13,18 @@ export default function ProductList(props) {
           </li>;
         })}
       </ul> */}
-{props.products.map((product)=>{
-  return(
-
-)
-
-})}
+      <ul class="collection">
+        {props.products.map(product => {
+          return (
+            <div>
+              <li class="collection-item">
+                {product.name}
+                <div className="secondary-content">{product.price}</div>
+              </li>
+            </div>
+          );
+        })}
+      </ul>
       {/* <h6>Electronics</h6>
       <ul class="collection">
         <li class="collection-item">

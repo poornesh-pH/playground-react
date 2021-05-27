@@ -10,7 +10,7 @@ export default function Search() {
       <div>
         <p>
           <label>
-            <input type="checkbox" />
+            <input type="checkbox" onChange={}/>
             <span>Show only available items</span>
           </label>
         </p>

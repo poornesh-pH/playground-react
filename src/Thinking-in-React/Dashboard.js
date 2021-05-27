@@ -46,12 +46,14 @@ export default class Dashboard extends Component {
       ]
     };
   }
-
   render() {
+    const availablity = () => {
+      console.log('changed');
+    };
     return (
       <div className="container">
         <h5>Thinking in React</h5>
-        <Search />
+        <Search availablity={availablity} />
         <Products products={this.state.products} />
       </div>
     );

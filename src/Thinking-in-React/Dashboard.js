@@ -48,13 +48,7 @@ export default class Dashboard extends Component {
     };
   }
   render() {
-    const availablity = () => {
-      this.setState(() => {
-        return {
-          available: !available
-        };
-      });
-    };
+    const availablity = () => {};
     return (
       <div className="container">
         <h5>Thinking in React</h5>

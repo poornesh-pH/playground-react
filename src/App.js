@@ -3,7 +3,7 @@ import './style.css';
 import 'materialize-css'; // It installs the JS asset only
 import 'materialize-css/dist/css/materialize.min.css';
 import AppRouter from './React-Routing/AppRouter';
-
+import Dashboard from './Thinking-in-React/Dashboard';
 export default function App() {
   const [counter, setCounter] = useState(0);
   const incrementCounter = value => setCounter(counter + value);
@@ -34,8 +34,10 @@ export default function App() {
       <Button inc={incrementCounter} increment={5} />
       <Button inc={incrementCounter} increment={10} />
       <Button inc={incrementCounter} increment={100} />
-      <Display message={counter} /> <hr/>
-      <AppRouter /><hr />
+      <Display message={counter} /> <hr />
+      <AppRouter />
+      <hr />
+      <Dashboard />
     </> // React.Fragment
   );
 }

@@ -5,3 +5,10 @@
   font-size: 40px;
   font-weight: bold;
 }
+.heading {
+  display: flex;
+  justify-content: space-evenly;
+}
+.container{
+ margin: 10%;
+}

@@ -34,8 +34,8 @@ export default function App() {
       <Button inc={incrementCounter} increment={5} />
       <Button inc={incrementCounter} increment={10} />
       <Button inc={incrementCounter} increment={100} />
-      <Display message={counter} />
-      <AppRouter />
+      <Display message={counter} /> <hr/>
+      <AppRouter /><hr />
     </> // React.Fragment
   );
 }

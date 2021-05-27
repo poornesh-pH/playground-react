@@ -8,7 +8,7 @@ export default function Products(props) {
         <h5>Name</h5>
         <h5>Price</h5>
       </div>
-      <ProductList keyproducts={props.products} />
+      <ProductList products={props.products} />
     </div>
   );
 }

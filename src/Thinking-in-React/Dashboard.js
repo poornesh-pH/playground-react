@@ -69,9 +69,18 @@ export default class Dashboard extends Component {
           isAvailable: false
         });
       } else this.setState({ [e.target.name]: e.target.value });
-      console.log(this.state.isAvailable);
     };
 
+    const productArray = () => {
+      // if (!this.state.isAvailable) {
+      return this.state.products.filter(product =>
+        product.name.toLowerCase().includes(this.state.searchText.toLowerCase())
+      );
+      // } else {
+      //   return this.state.products;
+      // }
+    };
+    console.log(productArray());
     return (
       <div className="container">
         <h5>Thinking in React</h5>

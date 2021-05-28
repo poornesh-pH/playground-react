@@ -71,21 +71,25 @@ export default class Dashboard extends Component {
       } else this.setState({ [e.target.name]: e.target.value });
     };
 
-    const productArray = () => {
-      // if (!this.state.isAvailable) {
+    const searchFilter = () => {
       return this.state.products.filter(product =>
         product.name.toLowerCase().includes(this.state.searchText.toLowerCase())
       );
-      // } else {
-      //   return this.state.products;
-      // }
     };
-    console.log(productArray());
+
+    const filteredArray = () => {
+      if (this.state.isAvailable) {
+        return searchFilter().filter(product => product.stocked);
+      } else return searchFilter();
+    };
+    // console.log(filteredArray());
+
+    // console.log(searchFilter());
     return (
       <div className="container">
         <h5>Thinking in React</h5>
         <Search setValue={setValue} />
-        <Products products={this.state.products} />
+        <Products products={filteredArray()} />
       </div>
     );
   }

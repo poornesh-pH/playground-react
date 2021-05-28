@@ -1,7 +1,7 @@
 import React from 'react';
 
 export default function ProductList(props) {
-  console.log(props.products, props.availablity);
+  console.log(props, 'product list props');
   return (
     <div>
       <h6>Shopping Goods</h6>

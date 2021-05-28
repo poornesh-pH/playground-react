@@ -4,6 +4,7 @@ import { NavLink } from 'react-router-dom';
 export default function Header() {
   return (
     <div>
+      <header>React router</header>
       <NavLink exact activeClassName="is-active" to="/">
         Home
       </NavLink>

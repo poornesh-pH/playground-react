@@ -44,30 +44,27 @@ export default class Dashboard extends Component {
           name: 'Nexus 7'
         }
       ],
-      onlyAvailable: false
+      onlyAvailable: false,
+      searchText: ''
     };
   }
   render() {
-    const availablity = prevState => {
-      this.setState(() => {
-        return {
-          onlyAvailable: !prevState.onlyAvailable
-        };
-      });
-      // if (this.state.onlyAvailable) {
-      //   return this.state.products.filter(product => product.stocked == true);
-      // } else {
-      //   return this.state.products;
-      // }
+    const availablity = e => {
+      // const showAvailablity =
+      //   e && e.target.type === 'checkbox' && e.target.checked ? true : false;
+      // console.log(showAvailablity);
+      // if (showAvailablity) {
+      //   return this.state.products.filter(product => {
+      //     product.stocked === true;
+      //   });
+      // } else return this.state.products;
     };
+    const
     return (
       <div className="container">
         <h5>Thinking in React</h5>
         <Search availablity={availablity} />
-        <Products
-          products={this.state.products}
-          availablity={this.state.onlyAvailable}
-        />
+        <Products products={this.state.products} />
       </div>
     );
   }

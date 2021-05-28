@@ -5,12 +5,12 @@ export default function ProductList(props) {
   return (
     <div>
       <h6>Shopping Goods</h6>
-      <ul class="collection">
+      <ul className="collection">
         {props.products.map(product => {
           if (product.category == 'Sporting Goods') {
             return (
-              <div>
-                <li class="collection-item">
+              <div key={product.name.toString()}>
+                <li className="collection-item">
                   {product.name}
                   <div className="secondary-content">{product.price}</div>
                 </li>
@@ -20,12 +20,12 @@ export default function ProductList(props) {
         })}
       </ul>
       <h6>Electronics</h6>
-      <ul class="collection">
+      <ul className="collection">
         {props.products.map(product => {
           if (product.category == 'Electronics') {
             return (
-              <div>
-                <li class="collection-item">
+              <div key={product.name.toString()}>
+                <li className="collection-item">
                   {product.name}
                   <div className="secondary-content">{product.price}</div>
                 </li>

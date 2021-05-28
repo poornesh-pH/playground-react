@@ -3,15 +3,15 @@ import React from 'react';
 export default function Search(props) {
   return (
     <div>
-      <div class="input-field col s6">
+      <div className="input-field col s6">
         <input
           id="last_name"
           type="text"
-          class="validate"
+          className="validate"
           name="searchText"
           onChange={props.setValue}
         />
-        <label for="last_name">Search</label>
+        <label htmlFor="last_name">Search</label>
       </div>
       <div>
         <p>

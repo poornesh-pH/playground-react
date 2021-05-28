@@ -49,23 +49,29 @@ export default class Dashboard extends Component {
     };
   }
   render() {
-    const availablity = e => {
-      // const showAvailablity =
-      //   e && e.target.type === 'checkbox' && e.target.checked ? true : false;
-      // console.log(showAvailablity);
-      // if (showAvailablity) {
-      //   return this.state.products.filter(product => {
-      //     product.stocked === true;
-      //   });
-      // } else return this.state.products;
-    };
+    // const availablity = e => {
+    // const showAvailablity =
+    //   e && e.target.type === 'checkbox' && e.target.checked ? true : false;
+    // console.log(showAvailablity);
+    // if (showAvailablity) {
+    //   return this.state.products.filter(product => {
+    //     product.stocked === true;
+    //   });
+    // } else return this.state.products;
+    // };
     const setValue = e => {
-      console.log('in');
-      this.setState(() => {
-        [e.target.name] = e.target.value;
-      });
+      if (e && e.target.type == 'checkbox' && e.target.checked) {
+        this.setState({
+          isAvailable: true
+        });
+      } else if (e && e.target.type == 'checkbox' && !e.target.checked) {
+        this.setState({
+          isAvailable: false
+        });
+      } else this.setState({ [e.target.name]: e.target.value });
+      console.log(this.state.isAvailable);
     };
-    console.log(this.state.searchText);
+
     return (
       <div className="container">
         <h5>Thinking in React</h5>

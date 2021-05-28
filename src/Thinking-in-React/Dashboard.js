@@ -44,7 +44,7 @@ export default class Dashboard extends Component {
           name: 'Nexus 7'
         }
       ],
-      onlyAvailable: false,
+      isAvailable: false,
       searchText: ''
     };
   }
@@ -59,11 +59,17 @@ export default class Dashboard extends Component {
       //   });
       // } else return this.state.products;
     };
-    const
+    const setValue = e => {
+      console.log('in');
+      this.setState(() => {
+        [e.target.name] = e.target.value;
+      });
+    };
+    console.log(this.state.searchText);
     return (
       <div className="container">
         <h5>Thinking in React</h5>
-        <Search availablity={availablity} />
+        <Search setValue={setValue} />
         <Products products={this.state.products} />
       </div>
     );

@@ -2,7 +2,7 @@ import React from 'react';
 import ProductList from './ProductList';
 
 export default function Products(props) {
-  console.log(props,"products props")
+  // console.log(props,"products props")
   return (
     <div>
       <div className="heading">
